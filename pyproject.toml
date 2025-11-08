@@ -21,4 +21,4 @@ classifiers = [
 Homepage = "https://github.com/kaledaljebur/simple-http-fileserver"
 
 [tool.setuptools]
-script-files = ["HTTPFileServer.py", "HTTPFileServerApp.py"]
+script-files = ["simple-http-fileserver.py", "simple-http-fileserver-app.py"]

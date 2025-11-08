@@ -147,41 +147,35 @@ def start_gui():
 
     def show_help():
         help_text = r"""
-    HTTP File Server
+    ++++Simple HTTP File Server++++
 
-    This Tool will run python based http GET and Post webserver.
+This Tool will run python based http GET and Post file server.
 
-    Usage:
-    1. The server will list (GET) the content of the current directory where the app located:
-        Browse the IP of the machine with the selected port http://192.168.8.1:80
-        Or you can use one of the following in linux:
-        wget http://192.168.8.1:80/ -O -
-        Or:
-        curl http://192.168.8.1:80/ 
+Usage:
+1. The server will list (GET) the content of the current directory where the app located: Browse the IP of the machine with the selected port http://192.168.8.10:80 Or you can use one of the following in linux:
+wget http://192.168.8.10:80/
+Or: curl http://192.168.8.10:80/
 
-    2. The server will accept transferred files (POST) 
-        and save them to current directory where the app located.
-        You can use one of the following in linux (Ctrl+C to copy):
-        
-        wget --method=POST \
-        --header="X-Filename: test.txt" \
-        --body-file=somefile.txt \
-        http://192.168.8.1:80/ -O -
+2. The server will accept transferred files (POST) and save them to current directory where the app located. You can use one of the following: 
+a) Using curl
+curl.exe -X POST -H "X-Filename: nmap.exe" --data-binary "@C:\Users\kaled\Downloads\nmap-7.98-setup.exe" http://192.168.8.10:80/
+you will get nmap.exe after the upload.
+Where:
+-X Use the HTTP POST method (send data in the request body).
+-H "X-Filename: nmap.exe". Add a custom HTTP header named X-Filename with value nmap.exe (your server reads this to pick the filename to save).
+--data-binary "@C:\Users\kaled\Downloads\nmap-7.98-setup.exe" Send the exact bytes of that local file as the HTTP request body. The @ tells curl to read the file contents.
+http://192.168.8.10:80/ The destination URL (IP and port 80).
 
-        Where:
-        --method=POST: sets the method to POST
-        --header=...: sends the custom X-Filename header
-        test.txt: the file name before transferring, it can be anything like key.pem
-        --body-file=somefile.txt: sends the file as raw binary
-        somefile.txt: the file name after transferring, it should be exact
-        -O -: prints the server's response to stdout
+b) Using wget
+wget --method=POST --header="X-Filename: test.txt" --header="Content-Type: application/octet-stream" --body-file="C:\Users\kaled\Downloads\somefile.txt" "http://192.168.8.10:80/"
+Where: 
+--method=POST sets the method to POST.
+--header=... sends the custom X-Filename header.
+test.txt the file name after transferring, it can be anything like key.pem.
+--body-file=somefile.txt sends the file as raw binary.
+somefile.txt the file name before transferring, it should be exact.
 
-        Or:
-        curl -X POST http://192.168.8.1:80/ \
-        -H "X-Filename: test.txt" \
-        --data-binary @somefile.txt 
-
-    Created by Kaled Aljebur for learning purposes in teaching classes.
+Created by Kaled Aljebur for learning purposes in teaching classes.
         """
         
         top = tk.Toplevel(window)
@@ -198,10 +192,10 @@ def start_gui():
         close_button.pack(pady=5)
 
     window = tk.Tk()
-    window.title("HTTP File Server")
+    window.title("Simple HTTP File Server")
     window.geometry("500x450")
 
-    tk.Label(window, text="Get & Post WebServer").pack(pady=5)
+    tk.Label(window, text="Get & Post fileServer").pack(pady=5)
 
     port_frame = tk.Frame(window)
     port_frame.pack(pady=5)
