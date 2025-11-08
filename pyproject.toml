@@ -8,12 +8,10 @@ version = "0.1.0"
 description = "A simple HTTP file server for upload and download, built in pure Python with optional GUI."
 readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.8"
-license = { text = "MIT" }
 authors = [{ name = "Kaled Aljebur" }]
 keywords = ["http", "file-server", "upload", "download", "teaching"]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
   "Topic :: Internet :: WWW/HTTP :: HTTP Servers"
 ]
 
@@ -22,3 +20,4 @@ Homepage = "https://github.com/kaledaljebur/simple-http-fileserver"
 
 [tool.setuptools]
 script-files = ["simple-http-fileserver.py", "simple-http-fileserver-app.py"]
+license-files = []
