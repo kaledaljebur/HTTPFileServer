@@ -1,7 +1,7 @@
 # Start
 - This is learning project tested in Kali
 - In Kali or any Linux, use this command to install
-    - `pip install simple-http-fileserver`
+    - `pipx install simple-http-fileserver`
 - `simple-http-fileserver-cli.py` is the no GUI version.
 - While `simple-http-fileserver.py` is with GUI.
 - Tested in Kali and Windows10/11
