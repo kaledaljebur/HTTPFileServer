@@ -1,7 +1,7 @@
 # Versions
 
-- `simple-http-fileserver.py` is the no GUI version.
-- While `simple-http-fileserver-app.py` is with GUI.
+- `simple-http-fileserver-cli.py` is the no GUI version.
+- While `simple-http-fileserver.py` is with GUI.
 - Tested in Kali and Windows10/11
 
 # Intro
