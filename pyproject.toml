@@ -5,8 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "simple-http-fileserver"
 version = "0.1.0"
-description = "A simple HTTP file server for upload and download, built in pure Python with optional Tkinter GUI."
-readme = "README.md"
+description = "A simple HTTP file server for upload and download, built in pure Python with optional GUI."
+readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.8"
 license = { text = "MIT" }
 authors = [{ name = "Kaled Aljebur" }]
