@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-http-fileserver"
+version = "0.1.0"
+description = "A simple HTTP file server for upload and download, built in pure Python with optional Tkinter GUI."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Kaled Aljebur" }]
+keywords = ["http", "file-server", "upload", "download", "teaching"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Internet :: WWW/HTTP :: HTTP Servers"
+]
+
+[project.urls]
+Homepage = "https://github.com/kaledaljebur/simple-http-fileserver"
+
+[tool.setuptools]
+script-files = ["HTTPFileServer.py", "HTTPFileServerApp.py"]
