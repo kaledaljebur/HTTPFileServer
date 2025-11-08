@@ -1,3 +1,19 @@
+Metadata-Version: 2.4
+Name: simple-http-fileserver
+Version: 0.1.1
+Summary: A simple Python HTTP file server for upload and download, with optional GUI.
+Author: Kaled Aljebur
+Project-URL: Homepage, https://github.com/kaledaljebur/simple-http-fileserver
+Project-URL: Repository, https://github.com/kaledaljebur/simple-http-fileserver
+Project-URL: Issues, https://github.com/kaledaljebur/simple-http-fileserver/issues
+Keywords: http,file-server,upload,download,teaching
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
 # Start
 - This is learning project tested in Kali
 - In Kali or any Linux, use this command to install

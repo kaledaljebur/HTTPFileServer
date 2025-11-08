@@ -225,5 +225,7 @@ Created by Kaled Aljebur for learning purposes in teaching classes.
 
     window.mainloop()
 
-if __name__ == "__main__":
+def main():
     start_gui()
+if __name__ == "__main__":
+    main()
