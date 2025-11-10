@@ -16,7 +16,7 @@
 - In Kali's terminal, use `getpost-fileserver-cli.py`.
 - In Windows CMD, use `py -m runpy getpost_fileserver.server`.
 
-# Intro
+# In the client
 This Tool will run python based http GET and Post webserver.
 
 Usage:
@@ -29,7 +29,7 @@ Usage:
 
 1. The server will accept transferred files (POST) 
     and save them to current directory where the app located.
-    You can use one of the following: \
+    You can use one of the following: 
     - Using curl \
     `curl.exe -X POST -H "X-Filename: nmap.exe" --data-binary "@C:\Users\kaled\Downloads\nmap-7.98-setup.exe" http://192.168.8.10:80/` \
     you will get `nmap.exe` after the upload. \
