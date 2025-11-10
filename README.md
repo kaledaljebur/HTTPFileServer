@@ -1,4 +1,4 @@
-# Install
+## Install
 - This is learning project tested in Kali  and Win11.
 - In Kali or any Linux, use this command to install:
     - `pipx install getpost-fileserver`
@@ -8,15 +8,15 @@
 - While `getpost-fileserver.py` is with GUI.
 - Tested in Kali and Windows10/11
 
-# Start GUI version `getpost-fileserver.py`
+## Start GUI version `getpost-fileserver.py`
 - In Kali's terminal, use `getpost-fileserver.py`.
 - In Windows CMD, use `py -m runpy getpost_fileserver.app`.
 
-# Start CLI version `getpost-fileserver-cli.py`
+## Start CLI version `getpost-fileserver-cli.py`
 - In Kali's terminal, use `getpost-fileserver-cli.py`.
 - In Windows CMD, use `py -m runpy getpost_fileserver.server`.
 
-# In the client
+## In the client
 This Tool will run python based http GET and Post webserver.
 
 Usage:
