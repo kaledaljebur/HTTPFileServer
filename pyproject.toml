@@ -26,5 +26,10 @@ Issues = "https://github.com/kaledaljebur/getpost-fileserver/issues"
 getpost-fileserver-cli = "getpost_fileserver.server:main"
 getpost-fileserver = "getpost_fileserver.app:main"
 
+[tool.setuptools.packages.find]
+include = ["getpost_fileserver*"]
+exclude = ["imgs*"]    
+
 [tool.setuptools]
+include-package-data = true
 license-files = []

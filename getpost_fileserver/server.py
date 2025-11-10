@@ -16,14 +16,34 @@ def main():
             self.send_response(200)
             self.end_headers()
             self.wfile.write(b"OK")
+
         def do_GET(self):
             try:
-                entries = os.listdir('.')
-                listing = "\n".join(entries).encode()
+                if self.path in ("/", ""):
+                    files = [f for f in os.listdir('.') if os.path.isfile(f)]
+                    links = "".join(f'<a href="/{f}">{f}</a><br>\n' for f in files)
+                    body = f"<pre>{links or '(no files)'}</pre>".encode()
+
+                    self.send_response(200)
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
+                    self.end_headers()
+                    self.wfile.write(body)
+                    return
+
+                name = os.path.basename(self.path.lstrip("/"))
+                if not os.path.isfile(name):
+                    self.send_response(404)
+                    self.end_headers()
+                    self.wfile.write(b"File not found")
+                    return
+
                 self.send_response(200)
+                self.send_header("Content-Type", "application/octet-stream")
+                self.send_header("Content-Disposition", f'attachment; filename="{name}"')
                 self.end_headers()
-                self.wfile.write(b"Directory listing:\n")
-                self.wfile.write(listing)
+                with open(name, "rb") as f:
+                    self.wfile.write(f.read())
+
             except Exception as e:
                 self.send_response(500)
                 self.end_headers()
