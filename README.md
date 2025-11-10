@@ -41,7 +41,7 @@ Usage:
         - `http://192.168.8.10:80/` The destination URL (IP and port 80).
 
     - Using wget \
-    `wget --method=POST --header="X-Filename: test.txt" --header="Content-Type: application/octet-stream" --body-file="./user.txt" "http://192.168.8.10:80/"` \
+    For Linux: `wget --method=POST --header="X-Filename: test.txt" --header="Content-Type: application/octet-stream" --body-file="./user.txt" "http://192.168.8.10:80/"` \
     Where: 
         - `--method=POST` sets the method to POST.
         - `--header=...` sends the custom X-Filename header.
