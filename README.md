@@ -1,11 +1,10 @@
 ## Install
-- This is learning project tested in Kali  and Win11.
+- This is learning project tested in Kali and Win10/Win11.
 - In Kali or any Linux, use this command to install:
     - `pipx install getpost-fileserver`
 - While in Windows, use:
     - `py -m pip install getpost-fileserver`
 - `getpost-fileserver-cli.py` is the CLI no GUI version, while `getpost-fileserver.py` is with GUI.
-- Tested in Kali and Windows10/11
 
 ## Start GUI version `getpost-fileserver.py`
 - In Kali's terminal, use `getpost-fileserver.py`.
