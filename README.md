@@ -4,8 +4,7 @@
     - `pipx install getpost-fileserver`
 - While in Windows, use:
     - `py -m pip install getpost-fileserver`
-- `getpost-fileserver-cli.py` is the no GUI version.
-- While `getpost-fileserver.py` is with GUI.
+- `getpost-fileserver-cli.py` is the CLI no GUI version, while `getpost-fileserver.py` is with GUI.
 - Tested in Kali and Windows10/11
 
 ## Start GUI version `getpost-fileserver.py`
